@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { RiMenu2Line } from "react-icons/ri";
+import { RiMenu2Line, RiCloseLine } from "react-icons/ri";
 
 const Navbar = () => {
   const [menu, setMenu] = useState(false);
@@ -9,30 +9,49 @@ const Navbar = () => {
   };
 
   return (
-    <nav className='flex flex-wrap justify-between items-center text-white px-10 pt-6 md:px-20 bg-[#1e2745] bg-opacity-80 rounded-full shadow-lg'>
-      <span className='text-xl font-bold tracking-wide'>Portfolio</span>
-      {/* Toggle Button for Mobile */}
-      <RiMenu2Line
-        size={30}
-        className='md:hidden absolute right-10 top-6 text-gray-400 hover:text-white transition-all duration-300 cursor-pointer'
-        onClick={toggleMenu}
-      />
+    <nav className='flex flex-wrap justify-between items-center text-white px-10 pt-6 md:px-20 bg-gradient-to-r from-[#2b3a47] to-[#1e2745] shadow-lg rounded-full'>
+      <img src='/js.png' alt='Logo' className='w-16 h-16' />
+
+      <div className='md:hidden'>
+        <RiMenu2Line
+          size={30}
+          className={`text-gray-300 hover:text-white transition-all duration-300 cursor-pointer ${
+            menu ? "hidden" : "block"
+          }`}
+          onClick={toggleMenu}
+          aria-label='Open navigation menu'
+        />
+        <RiCloseLine
+          size={30}
+          className={`text-gray-300 hover:text-white transition-all duration-300 cursor-pointer ${
+            menu ? "block" : "hidden"
+          }`}
+          onClick={toggleMenu}
+          aria-label='Close navigation menu'
+        />
+      </div>
+
       {/* Navigation Links */}
       <ul
-        className={`${
-          menu ? "block" : "hidden"
-        } mx-24 py-2 mt-4 font-semibold md:mt-0 bg-[#1e2745] px-6 rounded-full bg-opacity-50 text-center md:bg-transparent md:static md:flex gap-6`}>
-        <a href='#About'>
-          <li className='hover:text-gray-400 cursor-pointer'>About</li>
+        className={`${menu ? "block" : "hidden"}
+         mx-24 py-2 mt-4 font-semibold md:mt-0 bg-opacity-70 text-center md:bg-transparent md:static md:flex gap-6 transition-all duration-300`}>
+        <a href='#About' onClick={() => setMenu(false)}>
+          <li className='text-xl hover:text-gray-400 cursor-pointer'>About</li>
         </a>
-        <a href='#Experience'>
-          <li className='hover:text-gray-400 cursor-pointer'>Experience</li>
+        <a href='#Experience' onClick={() => setMenu(false)}>
+          <li className='text-xl hover:text-gray-400 cursor-pointer'>
+            Experience
+          </li>
         </a>
-        <a href='#Projects'>
-          <li className='hover:text-gray-400 cursor-pointer'>Projects</li>
+        <a href='#Projects' onClick={() => setMenu(false)}>
+          <li className='text-xl hover:text-gray-400 cursor-pointer'>
+            Projects
+          </li>
         </a>
-        <a href='#Contact'>
-          <li className='hover:text-gray-400 cursor-pointer'>Contact</li>
+        <a href='#Contact' onClick={() => setMenu(false)}>
+          <li className='text-xl hover:text-gray-400 cursor-pointer'>
+            Contact
+          </li>
         </a>
       </ul>
     </nav>

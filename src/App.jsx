@@ -1,12 +1,18 @@
 import React from "react";
 import Navbar from "./Components/Navbar/Navbar";
-import Home from "./Components/Home/Home"; // Assuming Home is located here
+import Home from "./Components/Home/Home"; 
+import About from "./Components/About/About";
+import Experience from "./Components/Experience/Experience";
+import Project from "./Components/Project/Project";git
 
 function App() {
   return (
-    <div className='bg-[#171d32] h-auto w-full overflow-hidden'>
+    <div className='bg-gradient-to-r from-blue-500 via-purple-600 to-pink-500 h-auto w-full overflow-hidden'>
       <Navbar />
       <Home />
+      <About />
+      <Experience />
+      <Project/>
     </div>
   );
 }

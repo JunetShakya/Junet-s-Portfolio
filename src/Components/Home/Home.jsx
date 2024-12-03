@@ -8,7 +8,7 @@ const Home = () => {
         <h1 className='text-3xl md:text-6xl font-bold leading-normal tracking-tighter'>
           Hello, I'm Junet Shakya
         </h1>
-        <p className='text-sm md:text-2xl tracking-tight text-justify'>
+        <p className='text-sm md:text-2xl tracking-tight text-justify mt-6'>
           I am a web developer with a strong academic foundation in Computer
           Applications, having recently graduated with a Bachelor of Computer
           Applications (BCA) from DAV College under Tribhuvan University. My
@@ -25,7 +25,7 @@ const Home = () => {
         <button
           className='mt-5 md:mt-10 text-white py-2 px-4 text-sm md:text-md hover:opacity-85
           duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]'>
-            Contact
+          Contact
         </button>
       </div>
       <div className='w-2/5 relative'>
