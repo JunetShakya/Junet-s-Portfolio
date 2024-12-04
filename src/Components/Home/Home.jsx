@@ -22,12 +22,21 @@ const Home = () => {
           leveraging my expertise to tackle real-world challenges, delivering
           impactful digital solutions that drive success.
         </p>
+
+        {/* Contact Button */}
         <button
           className='mt-5 md:mt-10 text-white py-2 px-4 text-sm md:text-md hover:opacity-85
-          duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697]'>
-          Contact
+            duration-300 hover:scale-105 font-semibold rounded-3xl bg-[#465697] w-full md:w-auto'
+          style={{ display: "block", textAlign: "left" }}>
+          <div>
+            <p className='font-semibold'>Contact Information</p>
+            <p className='text-sm'>Phone: 9808302894</p>
+            <p className='text-sm'>Email: shakyajunet@gmail.com</p>
+            <p className='text-sm'>Address: Jyatha, Laitpur</p>
+          </div>
         </button>
       </div>
+
       <div className='w-2/5 relative'>
         <img
           src={Profile}

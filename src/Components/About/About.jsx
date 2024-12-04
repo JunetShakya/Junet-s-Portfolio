@@ -1,14 +1,16 @@
 import React from "react";
-import FrontendImg from "../../assets/img/FD.png"; 
+import FrontendImg from "../../assets/img/FD.png";
 import BackendImg from "../../assets/img/BD.png";
 
 const About = () => {
   return (
     <div
-      className='text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-black shadow-lg
-      mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12'>
+      id='About' // Corrected the 'id' attribute
+      className='text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-black shadow-lg mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12'>
       <div>
-        <h2 className='text-2xl md:text-4xl font-bold mb-6 text-center'>About</h2>
+        <h2 className='text-2xl md:text-4xl font-bold mb-6 text-center'>
+          About
+        </h2>
         <div className='md:flex flex-wrap flex-col md:flex-row items-center gap-8'>
           {/* Frontend Developer Section */}
           <div className='flex flex-col md:flex-row gap-6 items-center'>
