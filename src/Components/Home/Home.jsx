@@ -3,8 +3,18 @@ import Profile from "../../assets/img/pp.png";
 
 const Home = () => {
   return (
-    <div className='text-white flex w-full justify-between items-start p-10 md:p-20'>
-      <div className='md:w-2/4 md:pt-10'>
+    <div className='text-white flex flex-col md:flex-row w-full justify-between items-center md:items-start p-10 md:p-20'>
+      {/* Image Section */}
+      <div className='order-1 md:order-2 w-full md:w-2/5 flex justify-center mt-10 md:mt-0'>
+        <img
+          src={Profile}
+          alt='Profile of Junet Shakya'
+          className='rounded-full shadow-lg w-32 h-32 md:w-auto md:h-auto'
+        />
+      </div>
+
+      {/* Text Section */}
+      <div className='order-2 md:order-1 md:w-2/4 md:pt-10'>
         <h1 className='text-3xl md:text-6xl font-bold leading-normal tracking-tighter'>
           Hello, I'm Junet Shakya
         </h1>
@@ -35,14 +45,6 @@ const Home = () => {
             <p className='text-sm'>Address: Jyatha, Laitpur</p>
           </div>
         </button>
-      </div>
-
-      <div className='w-2/5 relative'>
-        <img
-          src={Profile}
-          alt='Profile of Junet Shakya'
-          className='rounded-full shadow-lg -mt-10 md:-mt-16'
-        />
       </div>
     </div>
   );
