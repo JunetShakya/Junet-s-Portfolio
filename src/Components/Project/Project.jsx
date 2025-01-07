@@ -17,7 +17,7 @@ const Project = () => {
     {
       title: "Fake Logo Detection",
       description:
-        "A robust Fake Logo Detection system leveraging Python with CNN and LSTM for backend processing and React.js for the frontend interface. The project identifies counterfeit logos by analyzing visual patterns and temporal data. ",
+        "A robust Fake Logo Detection system leveraging Python with CNN and LSTM for backend processing and React.js for the frontend interface. The project identifies counterfeit logos by analyzing visual patterns and temporal data.",
       link: "#",
       image: Imagetwo,
     },
@@ -47,32 +47,59 @@ const Project = () => {
   return (
     <div
       id='Projects'
-      className='p-10 md:p-24 bg-gradient-to-r from-green-500 via-blue-500 to-purple-500'>
-      <h2 className='text-2xl md:text-4xl text-white font-bold text-center mb-12'>
+      className='p-6 md:p-12 ' // Reduced padding for smaller container
+    >
+      <h2 className='text-2xl md:text-4xl text-[#333333] font-bold text-center mb-8'>
         Projects
       </h2>
+
+      {/* Grid for first three projects */}
       <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
-        {projects.map((project, index) => (
+        {projects.slice(0, 3).map((project, index) => (
           <div
             key={index}
-            className='bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300'>
+            className='bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300 flex flex-col'
+            style={{ minHeight: "400px" }} // Ensures uniform box height
+          >
             <img
-              src={project.image} // Correct image reference
+              src={project.image}
               alt={project.title}
               className='w-full h-48 object-cover'
             />
-            <div className='p-6'>
+            <div className='p-6 flex-grow'>
               <h3 className='text-xl font-semibold text-gray-800'>
                 {project.title}
               </h3>
-              <p className='text-sm text-gray-600 mt-2 text-justify '>
+              <p className='text-sm text-gray-600 mt-2 text-justify'>
                 {project.description}
               </p>
-              {/* <a
-                href={project.link}
-                className='inline-block mt-4 text-blue-600 hover:underline'>
-                View Project
-              </a> */}
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {/* Centered Furniture and Weather App */}
+      <div className='grid grid-cols-1 md:grid-cols-2 gap-8 justify-center md:mx-36 mt-8'>
+        {" "}
+        {/* Reduced max-width */}
+        {projects.slice(3).map((project, index) => (
+          <div
+            key={index}
+            className='bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300 flex flex-col'
+            style={{ minHeight: "400px" }} // Ensures uniform box height
+          >
+            <img
+              src={project.image}
+              alt={project.title}
+              className='w-full h-48 object-cover'
+            />
+            <div className='p-6 flex-grow'>
+              <h3 className='text-xl font-semibold text-gray-800'>
+                {project.title}
+              </h3>
+              <p className='text-sm text-gray-600 mt-2 text-justify'>
+                {project.description}
+              </p>
             </div>
           </div>
         ))}

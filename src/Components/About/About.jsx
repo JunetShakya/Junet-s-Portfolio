@@ -6,7 +6,7 @@ const About = () => {
   return (
     <div
       id='About' // Corrected the 'id' attribute
-      className='text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-black shadow-lg mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12'>
+      className='text-[#333333] md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-[#FACF43] shadow-lg mx-0 md:mx-20 bg-opacity-30 rounded-lg p-12'>
       <div>
         <h2 className='text-2xl md:text-4xl font-bold mb-6 text-center'>
           About
@@ -15,15 +15,15 @@ const About = () => {
           {/* Frontend Developer Section */}
           <div className='flex flex-col md:flex-row gap-6 items-center'>
             <img
-              className='w-48 h-48 rounded-lg shadow-md'
+              className='w-48 h-48 text-[#333333] rounded-lg shadow-md'
               src={FrontendImg}
               alt='Frontend Developer'
             />
             <div className='w-full md:w-96'>
-              <h1 className='text-xl md:text-md leading-normal'>
+              <h1 className='text-xl text-[#333333] md:text-md leading-normal'>
                 Frontend Developer
               </h1>
-              <p className='text-sm md:text-md leading-tight text-justify'>
+              <p className='text-sm text-[#333333] md:text-md leading-tight text-justify'>
                 A front-end developer skilled in HTML, CSS, JavaScript, Node.js,
                 React.js, and Tailwind CSS creates responsive, interactive, and
                 visually appealing web interfaces. They leverage React.js for
