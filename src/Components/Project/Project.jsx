@@ -58,6 +58,7 @@ const Project = () => {
         {projects.slice(0, 3).map((project, index) => (
           <div
             key={index}
+            b
             className='bg-white rounded-lg shadow-lg overflow-hidden hover:scale-105 transform transition duration-300 flex flex-col'
             style={{ minHeight: "400px" }} // Ensures uniform box height
           >
